@@ -2,12 +2,17 @@ import React from "react";
 import "./ExpenseItem.css";
 
 const ExpenseItem = () => {
+    const expenseDate= new Date(2023, 2 ,28);
+    const formattedDate = expenseDate.toDateString();
+    const expenseTitle = "Car Insurance";
+    const expenseAmount = 297.67;
+
   return (
     <div className="expense-item">
-      <div>March 28th 2021</div>
+      <div>{formattedDate}</div>
       <div className="expense-item_description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item_price">$ 297.67</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item_price">${expenseAmount}</div>
       </div>
     </div>
   );
